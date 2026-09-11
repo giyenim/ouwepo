@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+    font-family: "Pretendard Variable";
+    min-width: 1600px;
+    min-height: max(100vh, 900px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    width: 1600px;
+    height: 900px;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0 400px;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+}
+
+li {
+    position: relative;
+    width: max-content;
+    transform-origin: 16px 50%;
+    transform: rotate(-90deg);
+}
+
+li span:not(.월) {
+    padding-right: 10px;
+}
+
+#책-사탄탱고 {
+    --속도: 200;
+    --거리: 442.36;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+#책-소년이온다 {
+    --속도: 200;
+    --거리: 301.92;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+}
+
+#책-채식주의자 {
+    --속도: 200;
+    --거리: 293.89;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 250px;
+}
+
+#책-아침그리고저녁 {
+    --속도: 200;
+    --거리: 460.5;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 350px;
+}
+
+#책-3부작 {
+    --속도: 200;
+    --거리: 306.72;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 450px;
+}
+
+#책-단순한열정 {
+    --속도: 200;
+    --거리: 428.25;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 550px;
+}
+
+#책-집착 {
+    --속도: 200;
+    --거리: 369.28;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 650px;
+}
+
+#책-세월 {
+    --속도: 200;
+    --거리: 444.13;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 750px;
+}
+
+#책-낙원 {
+    --속도: 200;
+    --거리: 427.61;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 850px;
+}
+
+#책-야생붓꽃 {
+    --속도: 200;
+    --거리: 368.59;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 950px;
+}
+
+#책-관객모독 {
+    --속도: 200;
+    --거리: 491.86;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1050px;
+}
+
+#책-방랑자들 {
+    --속도: 200;
+    --거리: 368.95;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1150px;
+}
+
+#책-남아있는나날 {
+    --속도: 200;
+    --거리: 507.23;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1250px;
+}
+
+#책-전쟁은여자의얼굴을하지않았다 {
+    --속도: 200;
+    --거리: 744.41;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1350px;
+}
+
+#책-어두운상점들의거리 {
+    --속도: 200;
+    --거리: 613.28;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1450px;
+}
+
+#책-\?\?\? {
+    --속도: 200;
+    --거리: 176.22;
+    --원주: 100.53;
+    --틈: 70;
+    position: absolute;
+    bottom: 50px;
+    left: 1550px;
+}
+
+
+label {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    transition: max-width linear calc((var(--거리) + var(--틈)) / var(--속도) * 1s);
+}
+
+.월 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1000px;
+    left: 100%;
+    top: 50%;
+    translate: 0 -50%;
+    transform: rotate(90deg);
+    transition: rotate linear calc((var(--거리) + var(--틈)) / var(--속도) * 1s);
+}
+
+input:checked+label {
+    max-width: calc((var(--거리) + var(--틈)) * 1px);
+}
+
+input:checked+label .월 {
+    rotate: calc((var(--거리) + var(--틈)) / var(--원주) * 360deg + 90deg);
+}

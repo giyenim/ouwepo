@@ -1,0 +1,581 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Pretendard Variable";
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+    min-width: 1600px;
+    min-height: max(100vh, 900px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+}
+
+.canvas {
+    width: 1600px;
+    height: 900px;
+    position: relative;
+}
+
+.노독상 {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 900px;
+    line-height: 16px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 430px;
+    right: 0px;
+    /* 드래그용: 텍스트 선택·터치 스크롤 방지 */
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.왼벽 {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform-origin: right;
+    transform: skewY(4deg);
+    filter: brightness(0.9);
+}
+
+.오른벽 {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform-origin: left;
+    transform: skewY(-3deg);
+}
+
+.틈 {
+    width: 16px;
+    min-height: 899px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.층 {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.왼벽>.층 {
+    justify-content: flex-end;
+}
+
+.오른벽>.층 {
+    justify-content: flex-start;
+}
+
+.층:nth-child(1) {
+    min-height: 213px;
+}
+
+.층:nth-child(2) {
+    min-height: 210px;
+}
+
+.층:nth-child(3) {
+    min-height: 225px;
+}
+
+.층:nth-child(4) {
+    min-height: 225px;
+}
+
+/* 12월 */
+#사탄탱고 {
+    width: 130px;
+    height: 213px;
+    object-fit: cover;
+}
+
+/* 1월 */
+#소년이온다 {
+    width: 128px;
+    height: 194px;
+    object-fit: cover;
+}
+
+#채식주의자 {
+    width: 145px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* 2월 */
+#아침그리고저녁 {
+    width: 128px;
+    height: 188px;
+    object-fit: cover;
+}
+
+#삼부작 {
+    width: 127px;
+    height: 196px;
+    object-fit: cover;
+}
+
+/* 3월 */
+#단순한열정 {
+    width: 140px;
+    height: 210px;
+    object-fit: cover;
+}
+
+#집착 {
+    width: 128px;
+    height: 188px;
+    object-fit: cover;
+}
+
+#세월 {
+    width: 110px;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* 4월 */
+#낙원 {
+    width: 140px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* 5월 */
+#야생붓꽃 {
+    width: 137px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* 6월 */
+#관객모독 {
+    width: 132px;
+    height: 225px;
+    object-fit: cover;
+}
+
+/* 7월 */
+#방랑자들 {
+    width: 132px;
+    height: 225px;
+    object-fit: cover;
+}
+
+/* 8월 */
+#남아있는나날 {
+    width: 127px;
+    height: 188px;
+    object-fit: cover;
+}
+
+/* 9월 */
+#전쟁은여자의얼굴을하지않았다 {
+    width: 155px;
+    height: 225px;
+    object-fit: cover;
+}
+
+/* 10월 */
+#어두운상점들의거리 {
+    width: 140px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* 11월 */
+#미정 {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+#temp-box-1 {
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+
+    width: 20px;
+    height: 200px;
+    background-image: url("img/책갈피2.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*12월*/
+
+#시간-12 {
+    position: absolute;
+    left: 38.5%;
+    top: 11.11%;
+    width: 130px;
+    height: 213px;
+}
+
+#이미지-1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/resized/img1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#공백-1 {
+    width: 100%;
+    height: 400px;
+    display: none;
+    position: relative;
+}
+
+#시간-12 .공간 {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#시간-12 .공간::-webkit-scrollbar {
+    display: none;
+}
+
+#시간-12 .스크롤 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 100%;
+    background-color: transparent;
+    display: none;
+}
+
+#손잡이-1 {
+    width: 20px;
+    height: 200px;
+    background-image: url("img/책갈피2.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#temp-box {
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    width: 20px;
+    height: 200px;
+    top: 30%;
+    left: 30%;
+    background-image: url("img/책갈피2.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*1월*/
+
+#시간-1 {
+    position: absolute;
+    left: 9.375%;
+    top: 10.22%;
+    width: 273px;
+    height: 210px;
+}
+
+#시간-1 .공간 {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+}
+
+#시간-1 .공간::-webkit-scrollbar {
+    display: none;
+}
+
+#공백-2 {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: relative;
+    flex-shrink: 0;
+}
+
+#이미지-2 {
+    width: 128px;
+    height: 194px;
+    flex-shrink: 0;
+    background-image: url("img/resized/img2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-3 {
+    width: 145px;
+    height: 210px;
+    flex-shrink: 0;
+    background-image: url("img/resized/img3.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-1 .스크롤 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    display: none;
+}
+
+#손잡이-2 {
+    width: 200px;
+    height: 20px;
+    background-image: url("img/책갈피2-시계90.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*2월*/
+
+#시간-2 {
+    position: absolute;
+    left: 15.625%;
+    top: 38.885%;
+    width: 255px;
+    height: 196px;
+}
+
+#이미지-4 {
+    width: 128px;
+    height: 188px;
+    background-image: url("img/resized/img4.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-5 {
+    width: 127px;
+    height: 196px;
+    background-image: url("img/resized/img5.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-2 .공간 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*3월*/
+
+#시간-3 {
+    position: absolute;
+    left: 40%;
+    top: 56.44%;
+    width: 378px;
+    height: 210px;
+}
+
+#이미지-6 {
+    width: 140px;
+    height: 210px;
+    background-image: url("img/resized/img6.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-7 {
+    width: 128px;
+    height: 188px;
+    background-image: url("img/resized/img7.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-8 {
+    width: 110px;
+    height: 190px;
+    background-image: url("img/resized/img8.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-3 .공간 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*4월 5월*/
+
+#시간-4와5 {
+    position: absolute;
+    left: 9.625%;
+    top: 70.66%;
+    width: 277px;
+    height: 210px;
+}
+
+#이미지-9 {
+    width: 140px;
+    height: 210px;
+    background-image: url("img/resized/img9.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-10 {
+    width: 137px;
+    height: 210px;
+    background-image: url("img/resized/img10.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-4와5 .공간 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*6월 7월*/
+
+#시간-6과7 {
+    position: absolute;
+    left: 78.75%;
+    top: 11.11%;
+    width: 132px;
+    height: 450px;
+}
+
+#이미지-11 {
+    width: 132px;
+    height: 225px;
+    background-image: url("img/resized/img11.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-12 {
+    width: 132px;
+    height: 225px;
+    background-image: url("img/resized/img12.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-6과7 .공간 {
+    width: 100%;
+    height: 100%;
+}
+
+/*8월 9월*/
+
+#시간-8과9 {
+    position: absolute;
+    left: 68.75%;
+    top: 44.44%;
+    width: 282px;
+    height: 413px;
+}
+
+#이미지-13 {
+    width: 127px;
+    height: 188px;
+    background-image: url("img/resized/img13.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-14 {
+    width: 155px;
+    height: 225px;
+    background-image: url("img/resized/img14.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-8과9 .공간 {
+    width: 100%;
+    height: 100%;
+}
+
+/*10월 11월*/
+
+#시간-10과11 {
+    position: absolute;
+    left: 87.5%;
+    top: 66.66%;
+    width: 100px;
+    height: 200px;
+}
+
+#이미지-15 {
+    width: 100%;
+    height: 50%;
+    background-image: url("img/optimized/img15.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#이미지-16 {
+    width: 100%;
+    height: 50%;
+    background-image: url("img/optimized/img16.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#시간-10과11 .공간 {
+    width: 100%;
+    height: 100%;
+}

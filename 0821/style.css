@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    font-family: "Pretendard Variable";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px 0;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#책-사탄탱고:has(input:checked) {
+    background-color: rgba(181, 0, 7, 0.6);
+}
+
+#책-소년이온다:has(input:checked) {
+    background-color: rgba(218, 219, 175, 0.6);
+}
+
+#책-채식주의자:has(input:checked) {
+    background-color: rgba(81, 123, 187, 0.6);
+}
+
+#책-아침그리고저녁:has(input:checked) {
+    background-color: rgba(235, 240, 244, 0.6);
+}
+
+#책-3부작:has(input:checked) {
+    background-color: rgba(176, 199, 206, 0.6);
+}
+
+#책-단순한열정:has(input:checked) {
+    background-color: rgba(192, 203, 199, 0.6);
+}
+
+#책-집착:has(input:checked) {
+    background-color: rgba(152, 8, 129, 0.6);
+}
+
+#책-세월:has(input:checked) {
+    background-color: rgba(233, 228, 217, 0.6);
+}
+
+#책-낙원:has(input:checked) {
+    background-color: rgba(62, 110, 44, 0.6);
+}
+
+#책-야생붓꽃:has(input:checked) {
+    background-color: rgba(241, 132, 73, 0.6);
+}
+
+#책-관객모독:has(input:checked) {
+    background-color: rgba(252, 70, 1, 0.6);
+}
+
+#책-방랑자들:has(input:checked) {
+    background-color: rgba(250, 171, 131, 0.6);
+}
+
+#책-남아있는나날:has(input:checked) {
+    background-color: rgba(247, 233, 74, 0.6);
+}
+
+#책-전쟁은여자의얼굴을하지않았다:has(input:checked) {
+    background-color: rgba(42, 55, 46, 0.6);
+}
+
+#책-어두운상점들의거리:has(input:checked) {
+    background-color: rgba(242, 248, 248, 0.6);
+}
+
+#책-\?\?\?:has(input:checked) {
+    background-color: rgba(144, 238, 144, 0.6);
+}

@@ -1,0 +1,123 @@
+section {
+    color: black;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+span {
+    background-color: white;
+    padding: 0px 2px;
+}
+
+.창문 {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 5vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    flex-wrap: wrap;
+}
+
+.잡동사니 {
+    background-color: antiquewhite;
+    width: 30vw;
+    height: 15vh;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    display: flex;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+}
+
+.책상 {
+    background-color: aqua;
+    width: 30vw;
+    height: 50vh;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    padding: 12px 10px;
+}
+
+.침대 {
+    background-color: aquamarine;
+    width: 30vw;
+    height: 65vh;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    display: flex;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+}
+
+.외출 {
+    background-color: azure;
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+}
+
+.외출 .image-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    background-color: white;
+}
+
+.외출 .image-chip img,
+.외출 .image-chip video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 360px;
+    max-height: 240px;
+}
+
+.dvd-zone {
+    position: absolute;
+    top: 5vh;
+    left: 30vw;
+    width: 40vw;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.dvd-logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: red;
+    will-change: transform;
+}
+
+.dvd-logo-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+}

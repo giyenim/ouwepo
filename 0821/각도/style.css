@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    font-family: "Pretendard Variable";
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+li {
+    position: absolute;
+    white-space: nowrap;
+    overflow-x: auto;
+    top: 50%;
+    left: 50%;
+}
+
+li::-webkit-scrollbar {
+    height: 4px;
+}
+
+li::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0px;
+}
+
+li::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 0.1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0px;
+}
+
+li::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    border: 0.1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0px;
+}
+
+label {
+    padding: 0px 15px;
+}
+
+#책-사탄탱고 {
+    transform: translate(-50%, -50%) rotate(-88deg);
+    transform-origin: center center;
+}
+
+#책-사탄탱고>label {
+    display: flex;
+    width: 900.54px;
+    gap: 44rem;
+}
+
+#책-소년이온다 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transform-origin: center center;
+}
+
+#책-소년이온다>label {
+    display: flex;
+    width: 1272.79px;
+    gap: 75rem;
+}
+
+#책-채식주의자 {
+    transform: translate(-50%, -50%) rotate(-40deg);
+    transform-origin: center center;
+}
+
+#책-채식주의자>label {
+    display: flex;
+    width: 1400.15px;
+    gap: 80rem;
+}
+
+#책-아침그리고저녁 {
+    transform: translate(-50%, -50%) rotate(13deg);
+    transform-origin: center center;
+}
+
+#책-아침그리고저녁>label {
+    display: flex;
+    width: 1642.08px;
+    gap: 90rem;
+}
+
+#책-3부작 {
+    transform: translate(-50%, -50%) rotate(-50deg);
+    transform-origin: center center;
+}
+
+#책-3부작>label {
+    display: flex;
+    width: 1174.86px;
+    gap: 66rem;
+}
+
+#책-단순한열정 {
+    transform: translate(-50%, -50%) rotate(-10deg);
+    transform-origin: center center;
+}
+
+#책-단순한열정>label {
+    display: flex;
+    width: 1624.68px;
+    gap: 95rem;
+}
+
+#책-집착 {
+    transform: translate(-50%, -50%) rotate(30deg);
+    transform-origin: center center;
+}
+
+#책-집착>label {
+    display: flex;
+    width: 1800px;
+    gap: 95rem;
+}
+
+#책-세월 {
+    transform: translate(-50%, -50%) rotate(-63deg);
+    transform-origin: center center;
+}
+
+#책-세월>label {
+    display: flex;
+    width: 1010.09px;
+    gap: 56rem;
+}
+
+#책-낙원 {
+    transform: translate(-50%, -50%) rotate(-30deg);
+    transform-origin: center center;
+}
+
+#책-낙원>label {
+    display: flex;
+    width: 1800px;
+    gap: 99rem;
+}
+
+#책-야생붓꽃 {
+    transform: translate(-50%, -50%) rotate(-35deg);
+    transform-origin: center center;
+}
+
+#책-야생붓꽃>label {
+    display: flex;
+    width: 1569.10px;
+    gap: 88rem;
+}
+
+#책-관객모독 {
+    transform: translate(-50%, -50%) rotate(-80deg);
+    transform-origin: center center;
+}
+
+#책-관객모독>label {
+    display: flex;
+    width: 913.88px;
+    gap: 49rem;
+}
+
+#책-방랑자들 {
+    transform: translate(-50%, -50%) rotate(-70deg);
+    transform-origin: center center;
+}
+
+#책-방랑자들>label {
+    display: flex;
+    width: 957.76px;
+    gap: 51rem;
+}
+
+#책-남아있는나날 {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center center;
+}
+
+#책-남아있는나날>label {
+    display: flex;
+    width: 1600px;
+    gap: 90rem;
+}
+
+#책-전쟁은여자의얼굴을하지않았다 {
+    transform: translate(-50%, -50%) rotate(50deg);
+    transform-origin: center center;
+}
+
+#책-전쟁은여자의얼굴을하지않았다>label {
+    display: flex;
+    width: 1174.86px;
+    gap: 60rem;
+}
+
+#책-어두운상점들의거리 {
+    transform: translate(-50%, -50%) rotate(55deg);
+    transform-origin: center center;
+}
+
+#책-어두운상점들의거리>label {
+    display: flex;
+    width: 1098.69px;
+    gap: 60rem;
+}
+
+#책-\?\?\? {
+    transform: translate(-50%, -50%) rotate(60deg);
+    transform-origin: center center;
+}
+
+#책-\?\?\?>label {
+    display: flex;
+    width: 1039.23px;
+    gap: 60rem;
+}
